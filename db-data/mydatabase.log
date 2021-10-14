@@ -1,0 +1,10 @@
+/*C1*/SET SCHEMA SYSTEM_LOBS
+INSERT INTO BLOCKS VALUES(0,2147483647,0)
+COMMIT
+/*C2*/SET SCHEMA PUBLIC
+create table if not exists\u000a\u0009 logtable(eventid varchar(45),eventduration varchar(45),type varchar(45),host varchar(45),alert varchar(45))
+INSERT INTO LOGTABLE VALUES('scsmbstgra','5','APPLICATION_LOG','12345','True')
+COMMIT
+INSERT INTO LOGTABLE VALUES('scsmbstgrc','8','NA','NA','True')
+COMMIT
+DISCONNECT
